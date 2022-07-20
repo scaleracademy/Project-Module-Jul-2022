@@ -21,6 +21,7 @@
 		- once a note is added, it should have an id too
 	- Multiple notes can be added into a task
 
+> NOTE: Take other necessary assumptions
 	
 
 
@@ -64,6 +65,7 @@
 	- Comments can be deleted by the author of the comment 
 
 
+> NOTE: Take other necessary assumptions
 
 
 
