@@ -1,8 +1,8 @@
-# Todo List Backend Service 
+# Blogging App Backend Service 
 
 ## API Docs 
 
-**GET** `/tasks` 📄  
+**GET** `/articles` 📄  
 > get a list of all tasks 
  
 ```json
