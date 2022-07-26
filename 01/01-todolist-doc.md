@@ -2,37 +2,46 @@
 
 ## API Docs 
 
-**GET** `/tasks` 📄  
-> get a list of all tasks 
- 
+**GET** /tasks 📄
+> get a list of all tasks
+
 ```json
 [
   {
     "id": 1,
     "title": "this is something that i need to complete",
-    "due_date": 20220205
-    "completed": false
+    "due_date": "2020-05-20",
+    "completed": false,
   },
   {
-    "id": 2,
-    "title": "this is also something that i need to complete",
-    "due_date": 20220206
-    "completed": true
+  "id": 2,
+  "title": "Regular tasks",
+  "due_date": "2020-05-20",
+  "completed": false,
   }
 ]
 ```
 
-**GET** `/tasks/{id}` 
-> get a task by id 
+**GET** `/tasks/{id}`
+> get a task by id
 
-```json 
+```json
   {
     "id": 1,
     "title": "this is something that i need to complete",
-    "due_date": 20220205
+    "due_date": "2020-05-20",
     "completed": false,
     "notes": [
-      
+      {
+        "id": 1,
+        "title": "Maths",
+        "body": "revise maths from Unit-1 to 4"
+      },
+      {
+        "id": 2,
+        "title": "English",
+        "body": "revise english from Unit-1 to 4"
+      }
     ]
   }
 ```
@@ -50,10 +59,70 @@ examples -
 
 ```json
 [
-  {},
-  {}
+  {
+        "id": 1,
+        "title": "Maths",
+        "body": "revise maths from Unit-1 to 4"
+      },
+      {
+        "id": 2,
+        "title": "English",
+        "body": "revise english from Unit-1 to 4"
+      }
 ]
 ```
+
+**POST** `/tasks`
+> create a task 
+
+Request
+```json
+  {
+    "id": 1,
+    "title": "this is something that i need to complete",
+    "due_date": "2020-05-20",
+    "completed": false,
+    "notes": []
+  }
+```
+
+**POST** `/notes`
+> create a note 
+
+Request
+```json
+  {
+    "id": 1,
+    "title": "this is something that i need to complete",
+    "due_date": "2020-05-20",
+    "completed": false,
+    "notes": [
+      {
+        "id": 1,
+        "title": "Maths",
+        "body": "revise maths from Unit-1 to 4"
+      }
+    ]
+  }
+```
+
+**PATCH** `/tasks/{id}`
+* updates completed status to true
+* updates due date
+
+Request
+```json
+{
+   "completed": true,
+   "due_date": "2020-05-20"
+}
+```
+
+**DELETE** `/tasks/{id}`
+> delete a task with given id
+
+
+
 
 ### References 
 
@@ -61,5 +130,4 @@ If 📄 is used, it means the endpoint supports `?size=10&page=2` type of pagina
 
 ## Entities 
 
-![image](https://user-images.githubusercontent.com/1327050/180837289-72d49220-f104-45dd-80c6-e30378ab62a6.png)
-
+![TasksAndNotes](https://user-images.githubusercontent.com/93430500/181031553-cbccf5c3-d5e4-443b-b28e-3589a342cc24.png)
