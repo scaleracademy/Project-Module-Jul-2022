@@ -31,10 +31,8 @@
      "authorId" : "id3",
      "tags": [ "dogs","cats"]
   }
-  
     ]
-  }
-]
+ 
 ```
 
 
