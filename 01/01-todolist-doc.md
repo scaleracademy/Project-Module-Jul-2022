@@ -59,8 +59,10 @@
 ```
 
 
-**GET** `/tasks/4?notes=true`  - fetch details of task id = 4, including its notes 
-> get all notes inside a task 
+**GET** `/tasks/4?notes=true`  
+> get all notes inside a task
+> fetch details of task id = 4, including its notes 
+ 
 
 |query param | definition | 
 | -----------|-----------|
@@ -105,7 +107,7 @@
     ]
   }
 ]
-
+```
 
 **GET** `/tasks/{id}/notes` 
 > get all notes inside a task 
