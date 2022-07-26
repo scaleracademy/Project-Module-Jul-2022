@@ -214,4 +214,4 @@ If 📄 is used, it means the endpoint supports `?size=10&page=2` type of pagina
 
 ## Entities 
 
-![image](https://user-images.githubusercontent.com/1327050/180837289-72d49220-f104-45dd-80c6-e30378ab62a6.png)
+<img width="617" alt="image" src="https://user-images.githubusercontent.com/10246491/181072385-77de2953-cdb7-42fe-bbd8-2f8b93b91cc5.png">
