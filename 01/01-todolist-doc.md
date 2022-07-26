@@ -175,6 +175,39 @@
   
 ```
 
+**PUT** `/tasks/{id}` 
+> Edit a task by id 
+
+```json 
+  {
+    "id": 1,
+    "title": "updated task title",
+    "due_date": 20220205
+    "completed": false
+  }
+```
+
+
+**PUT** `/tasks/{id}/notes/{noteId}` 
+> Edit a note inside a task 
+
+```json
+     {
+       "id": 1,
+       "title": "updated note",
+       "body": " full body 1"
+     }
+```
+
+**DELETE** `/tasks/{id}` 
+> Delete a task by id 
+
+
+**DELETE** `/tasks/{id}/notes/{noteId}` 
+> Delete a note inside a task 
+
+
+
 ### References 
 
 If 📄 is used, it means the endpoint supports `?size=10&page=2` type of pagination properties 
