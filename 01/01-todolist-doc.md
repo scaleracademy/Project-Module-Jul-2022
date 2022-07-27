@@ -90,7 +90,9 @@ examples -
   {}
 ]
 ```
+## Entities 
 
+![image](https://user-images.githubusercontent.com/1327050/180837289-72d49220-f104-45dd-80c6-e30378ab62a6.png)
 
 
 # Blogging App
@@ -250,7 +252,4 @@ examples -
 
 If 📄 is used, it means the endpoint supports `?size=10&page=2` type of pagination properties 
 
-## Entities 
-
-![image](https://user-images.githubusercontent.com/1327050/180837289-72d49220-f104-45dd-80c6-e30378ab62a6.png)
 
