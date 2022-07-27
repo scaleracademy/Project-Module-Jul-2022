@@ -118,7 +118,7 @@ examples -
   }
 ```
 
-**POST** '/create_article/{id}'
+**POST** `/create_article/{id}`
 > create an article
 
 ```json 
@@ -202,7 +202,7 @@ examples -
 ]
 ```
 
-**POST** '/update_article/{id}'
+**POST** `/update_article/{id}`
 > update an article
 
 ```json 
@@ -214,14 +214,14 @@ examples -
   }
 ```
 
-**DELETE** '/articles'
+**DELETE** `/articles`
 > DELETE all the articles by the logged in user
 
-**DELETE** '/articles/{id}'
+**DELETE** `/articles/{id}`
 > DELETE a specific article identified by the ID 
 
 
-**POST** '/article/{id}/like'
+**POST** `/article/{id}/like`
 > like an article
 
 ```json 
@@ -231,7 +231,7 @@ examples -
   }
 ```
 
-**POST** '/article/{id}/comment'
+**POST** `/article/{id}/comment`
 > like an article
 
 ```json 
@@ -241,7 +241,7 @@ examples -
   }
 ```
 
-**DELETE** '/comments/{article_id}'
+**DELETE** `/comments/{article_id}`
 > DELETE the comments made by the logged in user
 
 
