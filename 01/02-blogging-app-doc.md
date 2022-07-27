@@ -202,4 +202,4 @@ If 📄 is used, it means the endpoint supports `?size=10&page=2` type of pagina
 
 ## Entities 
 
-![img_3.png](img_3.png)
+![blggingApp drawio (3)](https://user-images.githubusercontent.com/93430500/181287657-06e4b854-7edd-473f-9e2e-61299288af07.png)
