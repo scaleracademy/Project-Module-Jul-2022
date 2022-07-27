@@ -2,6 +2,42 @@
 
 ## API Docs 
 
+**POST** `/tasks'
+> to create a new task
+
+```json 
+  {
+    "title": "this is something that i need to complete",
+    "due_date": 20220205
+    "completed": false,
+  }
+```
+**POST** `/tasks/{id}'
+> to update duedate, description, completed status of any task
+
+```json 
+  {
+    "title": "this is something that i need to complete",
+    "due_date": 20220205
+    "completed": true,
+  }
+```
+
+**DELETE** '/tasks/{id}'
+> deletes the task with the ID provided
+
+
+**POST** `/tasks/{id}/notes'
+> to create a new task
+
+```json 
+  {
+     "title": "travel",
+     "body": "Need to leave by 5:00 PM"
+  }
+```
+
+
 **GET** `/tasks` 📄  
 > get a list of all tasks 
  
