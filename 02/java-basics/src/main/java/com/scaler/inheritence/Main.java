@@ -13,6 +13,8 @@ public class Main {
 
         var list2 = new ArrayList<String>();
 
+        var f = new ArrayList<Fruit>();
+
         // type-erasure ?
 
         ArrayList<Fruit> fruitBasket = new ArrayList<>();
