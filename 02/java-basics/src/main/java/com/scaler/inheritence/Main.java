@@ -23,5 +23,7 @@ public class Main {
         fruitBasket.add(new Apple());
         fruitBasket.add(new Mango());
 
+        System.out.println(fruitBasket.get(0).size);
+
     }
 }
