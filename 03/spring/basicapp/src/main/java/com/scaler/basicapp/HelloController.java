@@ -1,16 +1,29 @@
 package com.scaler.basicapp;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @RestController
 public class HelloController {
 
+    private ArrayList<String> list = new ArrayList<String>();
+
     @GetMapping("/hello/{id}")
     public String hello(@PathVariable String id) {
+        if (list.isEmpty()) {
+            return "Hello World!";
+        }
 
-        return "Hello World " + id + "!";
+        String greeting = list.get(Integer.parseInt(id));
+
+        return greeting;
+    }
+
+    @PostMapping("/greetings")
+    public void greetings(@RequestParam String greeting) {
+        System.out.println("greeting submitted: " + greeting);
+        list.add(greeting);
     }
 
 }
