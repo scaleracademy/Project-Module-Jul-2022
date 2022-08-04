@@ -1,10 +1,10 @@
-package com.scalerproject.BasicProject;
+package com.myproject.todoapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BasicProjectApplicationTests {
+class TodoappApplicationTests {
 
 	@Test
 	void contextLoads() {

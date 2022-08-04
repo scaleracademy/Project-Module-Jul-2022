@@ -1,14 +1,13 @@
-package com.scalerproject.BasicProject;
+package com.myproject.todoapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BasicProjectApplication {
+public class TodoappApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(BasicProjectApplication.class, args);
+		SpringApplication.run(TodoappApplication.class, args);
 	}
 
 }
