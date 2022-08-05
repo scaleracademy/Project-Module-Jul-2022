@@ -1,11 +1,13 @@
 package com.scaler.todo_withdb.tasks;
 
+import com.scaler.todo_withdb.common.ErrorResponseDto;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.net.URI;
 import java.util.List;
+import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/tasks")
@@ -36,5 +38,29 @@ public class TasksController {
     }
 
     @PatchMapping("/{id}")
-    void updateTaskById() {}
+    void updateTaskById() {
+    }
+
+    @ExceptionHandler({
+            TasksService.TaskNotFoundException.class,
+            TasksService.TaskAlreadyExistsException.class,
+            TasksService.TaskInvalidException.class
+    })
+    ResponseEntity<ErrorResponseDto> handleError(Exception e) {
+        HttpStatus errorStatus;
+
+        if (e instanceof TasksService.TaskNotFoundException) {
+            errorStatus = HttpStatus.NOT_FOUND;
+        } else if (e instanceof TasksService.TaskAlreadyExistsException) {
+            errorStatus = HttpStatus.CONFLICT;
+        } else if (e instanceof TasksService.TaskInvalidException) {
+            errorStatus = HttpStatus.BAD_REQUEST;
+        } else {
+            errorStatus = HttpStatus.INTERNAL_SERVER_ERROR;
+        }
+
+        return ResponseEntity
+                .status(errorStatus)
+                .body(new ErrorResponseDto(e.getMessage()));
+    }
 }
