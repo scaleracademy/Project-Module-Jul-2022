@@ -1,0 +1,22 @@
+{
+    "title": "My First Task",
+    "description": "Just a sample Task, nothing much.",
+    "deadline": "2023-01-01T00:00:00.000+00:00",
+    "completed": true
+}
+
+
+{
+    "title": "My Second Task",
+    "description": "Another task, which I will edit.",
+    "deadline": "2022-08-01T00:00:00.000+00:00",
+    "completed": false
+}
+
+
+{
+    "title": "My Third Task",
+    "description": "final task, which I will delete.",
+    "deadline": "2022-08-01T00:00:00.000+00:00",
+    "completed": true
+}

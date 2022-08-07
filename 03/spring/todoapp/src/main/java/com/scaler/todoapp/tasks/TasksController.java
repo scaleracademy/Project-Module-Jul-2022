@@ -1,13 +1,10 @@
 package com.scaler.todoapp.tasks;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.List;
+import java.text.ParseException;
+import java.util.HashSet;
 
 @RestController
 @RequestMapping("/tasks")
@@ -18,13 +15,22 @@ public class TasksController {
         this.tasksService = tasksService;
     }
 
-    @GetMapping
-    public List<TaskEntity> getAllTasks(){
+    @GetMapping("/")
+    public HashSet<TaskEntity> getAllTasks() {
         return tasksService.getAllTasks();
     }
 
-    @PostMapping
-    public void createTask(CreateTaskRequest request){
-        tasksService.createTask(request.getName(), new Date());
+    @PostMapping("/")
+    @ResponseStatus(code = HttpStatus.CREATED, reason = "Created")
+    public void createTask(@RequestBody CreateTaskRequest request) throws ParseException {
+
+        /** // TODO: Self - implement Date formatter
+         * Use JsonFormatter Annotation in CreateRequest dto
+         * This also fixed the incorrect date in Response (even though
+         * in tasks object it was correct).
+        */
+
+        tasksService.createTask(request.getName(), request.getDueDate());
+        // TODO: respond with 201 Created - Completed
     }
 }
