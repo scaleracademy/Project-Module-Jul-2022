@@ -9,7 +9,6 @@ import java.util.HashSet;
 @RestController
 @RequestMapping("/tasks")
 public class TasksController {
-
     private TasksService tasksService;
 
     public TasksController(TasksService tasksService) {
@@ -34,6 +33,4 @@ public class TasksController {
         tasksService.createTask(request.getName(), request.getDueDate());
         // TODO: respond with 201 Created - Completed
     }
-
-
 }
