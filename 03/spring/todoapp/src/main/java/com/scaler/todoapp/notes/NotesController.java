@@ -6,5 +6,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/tasks/{taskId}/notes")
 public class NotesController {
-
 }
