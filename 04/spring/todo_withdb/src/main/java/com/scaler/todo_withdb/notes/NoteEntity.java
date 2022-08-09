@@ -13,7 +13,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class NoteEntity extends BaseEntity {
-
     @Column(name = "title", nullable = false, length = 100)
     String title;
 
@@ -23,6 +22,7 @@ public class NoteEntity extends BaseEntity {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "task_id")
     TaskEntity task;
+
 
 
 }

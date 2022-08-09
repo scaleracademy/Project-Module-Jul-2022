@@ -25,6 +25,7 @@ public class TasksService {
                 .collect(Collectors.toList());
     }
 
+
     public TaskDto getTaskById(Long id) {
         var task = tasksRepository.findById(id).orElseThrow(() -> new TaskNotFoundException(id));
         return modelMapper.map(task, TaskDto.class);

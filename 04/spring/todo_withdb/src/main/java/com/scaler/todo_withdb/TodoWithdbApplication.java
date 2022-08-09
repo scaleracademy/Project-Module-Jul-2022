@@ -18,5 +18,4 @@ public class TodoWithdbApplication {
     public static void main(String[] args) {
         SpringApplication.run(TodoWithdbApplication.class, args);
     }
-
 }

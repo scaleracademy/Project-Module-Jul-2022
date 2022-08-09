@@ -15,7 +15,6 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 public class TaskEntity extends BaseEntity {
-
     @Column(name = "name", nullable = false)
     String name;
 
