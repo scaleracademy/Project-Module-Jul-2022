@@ -1,7 +1,7 @@
 package com.scaler.todo_withdb.common;
 
 import lombok.Data;
-import lombok.NonNull;
+import org.springframework.lang.NonNull;
 
 @Data
 public class ErrorResponseDto {

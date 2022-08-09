@@ -15,16 +15,21 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 public class TaskEntity extends BaseEntity {
-    @Column(name="name", nullable = false)
+    @Column(name = "name", nullable = false)
     String name;
 
-    @Column(name="due_date", nullable = false)
+    @Column(name = "due_date", nullable = false)
     Date dueDate;
 
     @Column(name = "done", nullable = false, columnDefinition = "boolean default false")
     boolean done;
 
     @OneToMany(mappedBy = "task", cascade = CascadeType.ALL)
+    @ToString.Exclude
     List<NoteEntity> notes;
+
+    public void setNotes(List<NoteEntity> notes) {
+        this.notes = notes;
+    }
 
 }

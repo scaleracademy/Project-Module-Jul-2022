@@ -11,7 +11,7 @@ public class TodoWithdbApplication {
 
     @Bean
     @Scope("singleton")
-    public ModelMapper modelMapper(){
+    public ModelMapper modelMapper() {
         return new ModelMapper();
     }
 
