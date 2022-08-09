@@ -23,5 +23,4 @@ public abstract class BaseEntity {
 
     @UpdateTimestamp
     Date updatedAt;
-
 }

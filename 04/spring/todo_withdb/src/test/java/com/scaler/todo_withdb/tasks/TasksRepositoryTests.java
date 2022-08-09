@@ -13,16 +13,13 @@ public class TasksRepositoryTests {
     @Autowired private TasksRepository tasksRepository;
 
     @Test
-    public void canCreateTask{
+    public void canCreateTask(){
         TaskEntity task = new TaskEntity();
         task.name = "test task";
         task.dueDate = new Date();
+        task.done = false;
         tasksRepository.save(task);
 
-        TaskEntity savedTask = tasksRepository.findAll().get(0);
-
-        assertEquals("test task",savedTask.name);
-
-        System.out.println(savedTask);
+        assertEquals("test task",tasksRepository.findAll().get(0).name);
     }
 }

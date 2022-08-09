@@ -8,6 +8,8 @@ import java.util.Date;
 @Data
 public class TaskDto {
     @Nullable
+    Long id;
+    @Nullable
     String name;
     @Nullable
     Date dueDate;
