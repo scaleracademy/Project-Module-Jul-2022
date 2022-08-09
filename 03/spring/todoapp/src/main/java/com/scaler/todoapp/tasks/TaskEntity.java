@@ -19,4 +19,5 @@ public class TaskEntity {
     Date dueDate;
     Boolean completed;
     List<NoteEntity> notes;
+
 }

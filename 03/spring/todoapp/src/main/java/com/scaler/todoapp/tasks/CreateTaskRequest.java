@@ -14,6 +14,7 @@ import java.util.Date;
 @Setter
 public class CreateTaskRequest {
     String name;
+
     @JsonFormat(pattern="yyyy-MM-dd")
     Date dueDate;
 }
