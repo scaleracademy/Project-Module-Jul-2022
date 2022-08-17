@@ -9,8 +9,5 @@ import java.util.List;
 @Repository
 public interface ArticlesRepository extends JpaRepository<ArticleEntity, Long> {
 
-//    @Query("SELECT a FROM articles a WHERE a.slug = ?1")
-//    List<ArticleEntity> findArticleEntitiesBySlugContaining(String slug);
-
     List<ArticleEntity> findArticleEntitiesBySlugContaining(String slug);
 }
