@@ -2,16 +2,20 @@ package com.scaler.blog_app.articles;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ArticlesService {
     private ArticlesRepository articlesRepository;
+
+    // real > fake > mock > stub
 
     public ArticlesService(ArticlesRepository articlesRepository) {
         this.articlesRepository = articlesRepository;
     }
 
-    void getAllArticles() {
-        articlesRepository.findAll();
+    List<ArticleEntity> getAllArticles() {
+        return articlesRepository.findAll();
     }
 
     void getArticleById(Long id) {
