@@ -10,7 +10,6 @@ import java.util.Date;
 @MappedSuperclass
 @Getter
 public abstract class BaseEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
